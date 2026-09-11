@@ -25,7 +25,7 @@ bytes and exit status against `/bin/echo` — because `:ok true` from a
 compiler means the artifact was built, not that it is right.
 
 ```
-AMU_HOME=<amu checkout> nbb test/echo_test.cljk
+AMU_HOME=<amu checkout> kbb --backend sci test/echo_test.cljk
 ```
 
 Nine cases, all byte-identical:
