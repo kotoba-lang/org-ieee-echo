@@ -19,13 +19,13 @@ nbb <amu>/scripts/package-command.cljs --code echo.bin --offset <reported> \
 
 ## Measured against the system utility
 
-`test/echo_test.cljs` does not assert that the guest compiles. It compiles
+`test/echo_test.cljk` does not assert that the guest compiles. It compiles
 it, packages it into a standalone binary, **runs that binary**, and compares
 bytes and exit status against `/bin/echo` — because `:ok true` from a
 compiler means the artifact was built, not that it is right.
 
 ```
-AMU_HOME=<amu checkout> nbb test/echo_test.cljs
+AMU_HOME=<amu checkout> nbb test/echo_test.cljk
 ```
 
 Nine cases, all byte-identical:
